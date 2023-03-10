@@ -1,0 +1,140 @@
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+}
+
+.container{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.d-flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.list-style-none{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.text-decoration{
+    text-decoration: none;
+}
+.aligh-item-center{
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+.bold{
+    font-weight: bold;
+}
+
+/* ******header******** */
+header{
+    padding-top: 15px;
+}
+.fa-medal{
+    font-size: 24px;
+    color: #000;
+}
+.fa-medal:hover{
+    color: #999;
+}
+.top-main a{
+    color: #000;
+    text-decoration: none;
+    font-size : 12px;
+    border-right: 1px solid #999;
+    padding-right: 15px;
+    margin-left: 20px;
+}
+.top-main a:hover{
+    color: #999;
+}
+/*******header-main*******/
+
+.main-logo img{ 
+    height: 70px;
+}
+.main{
+    position: relative;
+    
+}
+.main-menu{
+    width: 100%;
+    left: 500px;
+    margin: 0 auto;
+    padding-top: 19px;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    padding-left: 0;
+    z-index: 5;
+}
+
+.main-menu>.menu {
+    position: relative;
+    left: 50%;
+    padding-top: 17px;
+}
+.main-menu>li>a{
+    display: block;
+    width: 180px;
+    text-align: center;
+}
+.main-menu>li>a{
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: none;
+
+}
+.main-menu a:hover{
+    color: #999;
+}
+.lnb{
+    list-style: none;
+    background-color: #fff;
+    position: absolute;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    z-index: 5;
+    padding-top: 20px;
+    /* border: 1px solid #333; */
+    display: none;
+    
+}
+.lnb>li{
+    margin: 0;
+    padding: 0;
+}
+.lnb>li>a{
+    height: 40px;
+    color: #777;
+    display: block;
+    width: 180px;
+    font-size: 19px;
+    text-decoration: none;
+}
+.lnb>li>a:hover{
+    color: #000;
+}
+/******cover********/
+.cover{
+    width: 1300px;
+    height: 800px;
+    background-color: #666;
+    z-index: 2;
+}
