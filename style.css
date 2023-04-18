@@ -64,11 +64,11 @@ header{
 .main-logo img{ 
     height: 70px;
 }
-.main{
+.main-menu{
     position: relative;
     
 }
-.main-menu{
+.gnb{
     width: 100%;
     left: 500px;
     margin: 0 auto;
@@ -82,24 +82,24 @@ header{
     z-index: 5;
 }
 
-.main-menu>.menu {
+.gnb>.menu {
     position: relative;
     left: 50%;
     padding-top: 17px;
 }
-.main-menu>li>a{
+.gnb>li>a{
     display: block;
     width: 180px;
     text-align: center;
 }
-.main-menu>li>a{
+.gnb>li>a{
     color: #000;
     text-decoration: none;
     font-size: 30px;
     border-radius: none;
 
 }
-.main-menu a:hover{
+.gnb a:hover{
     color: #999;
 }
 .lnb{
@@ -131,10 +131,57 @@ header{
 .lnb>li>a:hover{
     color: #000;
 }
-/******cover********/
-.cover{
-    width: 1300px;
-    height: 800px;
-    background-color: #666;
-    z-index: 2;
+.header-section{
+    position: absolute;
+}
+
+.search-form{
+    position: relative;
+    left: 350px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    width: 230px;
+    height: 40px;
+    margin-top: 15px
+}
+.search, .btn-search{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+}
+.btn-search{
+    padding: 0;
+}
+.material-symbols-outlined{
+    padding-top: 9px;
+    margin-left: 20px;
+}
+/**********return***********/
+.main{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.return{
+
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+}
+.return-text{
+    text-align: center;
+    display: block;
+    height: 100px;
+}
+.return-text p{
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top :0px;
+}
+.return-text span{
+    cursor: pointer;
+    color: #111;
+    border-bottom: 1px solid #000;
 }
