@@ -122,5 +122,5 @@ li select:last-child
 
 .myButton2
 {
-    background: #ed7a7a !important;
+    background: linear-gradient(to left, red,green) !important;
 }
