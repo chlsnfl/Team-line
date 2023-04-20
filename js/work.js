@@ -10,7 +10,7 @@ $(function(){
     
         function mySlide(){
            $('.slidein').animate({
-               'left': '-1200px'
+               'left': '-1300px'
            }, 500, function(){
               $('.slidein img:first-child')
               .clone()
