@@ -157,6 +157,9 @@ header{
 .btn-search{
     padding: 0;
 }
+.btn-search span{
+    cursor: pointer;
+}
 .material-symbols-outlined{
     padding-top: 9px;
     margin-left: 20px;
