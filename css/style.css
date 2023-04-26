@@ -233,12 +233,145 @@ header{
 }
 footer{
     margin-top: -20px;
-    height: 200px;
-    background: #666
+    background: #000;
+    width: 100%;
 }
-.end{
+/* .end{
     color: #000;
     text-align: center;
     font-weight: 500;
     padding: 8px;
+} */
+
+/********footer*********/
+footer{
+    height: 500px;
+}
+.footer{
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-left{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+ul.left-first{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-weight: bold;
+}
+ul.left-first li{
+    margin-top: 15px;
+    padding-top: 10px;
+}
+ul.left-first a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+ul.left-sec{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.left-sec li{
+    margin-top: 15px;
+    padding-top: 10px;
+}
+ul.left-sec a{
+    color: #999;
+    text-decoration: none;
+}
+ul.left-sec a:first-child{
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+ul.left-sec a:hover{
+    color: #fff;
+    font-weight: bold;
+}
+ul.left-third{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.left-third li{
+    margin-top: 15px;
+    padding-top: 10px;
+}
+ul.left-third a{
+    color: #999;
+    text-decoration: none;
+}
+ul.left-third a:first-child{
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+ul.left-third a:hover{
+    color: #fff;
+    font-weight: bold;
+}
+.footer-right{
+    width: 50%;
+}
+.fa-brands{
+    font-size: 30px;
+    margin-left: 15px;
+    margin-top: 20px;
+    float: right;
+    color: #999;
+}
+.fa-brands:hover{
+    color: #f5f5f5;
+}
+
+.footer-sub{
+    width: 1300px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f5f5f5;
+}
+.footer-sub-left{
+    width: 50%;
+}
+.footer-sub-left a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer-sub-left i{
+    color: #fff;
+    margin-right: 10px;
+}
+.footer-sub-left p{
+    color: #fff;
+    display: inline;
+    margin-left: 30px;
+}
+ul.yakguan{
+    display: flex;
+    list-style-type: none;
+}
+ul.yakguan a{
+    text-decoration: none;
+    color: #999;
+}
+ul.yakguan a:nth-child(2){
+    color: #fff;
+    font-weight: bold;
+}
+ul.yakguan li{
+    padding: 0 10px;
+    padding-bottom: 10p;
 }
