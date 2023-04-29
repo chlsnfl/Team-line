@@ -13,6 +13,13 @@ $(function()   //이메일
 
 });  //jquery
 
+//아이디 확인 완료 시 색상 바뀌게 하기
+//일단은 누르면 바뀌는거로 해둠
+function changeColor(e)
+{
+    e.style.backgroundColor='#92CA80';
+}
+
 
 //휴대폰번호 앞 4자리 입력하면 뒤로 바로 넘어가기
 const fnum = document.getElementById('firstnum');
