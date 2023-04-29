@@ -26,12 +26,18 @@ body
     height: 80px;
 }
 
-.container ul
+.listyle
 {
     width: 100%;
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
+}
+
+.listyle:first-child
+{
+    margin-top: 10px;
 }
 
 /* .container ul li
@@ -39,17 +45,31 @@ body
     border-top: 1px solid#a6c2e8;
 } */
 
-.container ul span
+.container ul span.requ
 {
     display: block;
     width: 100%;
     text-align: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     /* background-color: #d2e0f3; */
 }
 
-.container label
+.container ul span.requ::after
+{
+    content: ' *';
+}
+
+.listyle::after
+{
+    content: '(*)는 필수 정보입니다.';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 13px;
+}
+
+.emailok
 {
     display: inline-block;
     margin-top: 20px;
@@ -67,11 +87,43 @@ input
     outline: none;
 }
 
-li>input:not(.tel , .email)
+.uncorrect
+{
+    font-size: 13px;
+    color: #EB6769;
+    margin-top: 10px;
+    display: none;
+}
+
+li input:not(.tel , .email)
 {
     min-width: 100%;
     height: 40px;
     padding-left: 10px;
+}
+
+.useridlist
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.useridlist label
+{
+    min-width: 78%;
+}
+
+#idsearch
+{
+    min-width: 20%;
+    padding: 0;
+    background-color: #EB6769; /* 확인 완료 시 색상 92CA80 */
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .jcenter
@@ -102,7 +154,7 @@ li select
     padding-left: 5px;
 }
 
-li select:last-child
+#email3
 {
     margin-top: 10px;
 }
@@ -113,7 +165,7 @@ li select:last-child
     width: 100%;
     height: 40px;
     margin-top: 20px;
-    background: linear-gradient(to right, red,green);
+    background: linear-gradient(to right, #EB6769, black, #92CA80);
     border: 1px solid rgba(0,0,0,0.5);
     border-radius: 3px;
     cursor: pointer;
@@ -122,5 +174,5 @@ li select:last-child
 
 .myButton2
 {
-    background: linear-gradient(to left, red,green) !important;
+    background: linear-gradient(to left, #EB6769, black, #92CA80) !important;
 }
