@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/join.js"></script>
     <link rel="stylesheet" href="css/join.css">
 </head>
 <body>
@@ -19,61 +17,77 @@
 
         <div class="alogo">
             <a href="index.html">   <!-- 로고 -->
-                <img class="logo" src="images/nice_logo.png" alt="logo">  <!-- logo 경로 수정해주세요 -->
+                <img class="logo" src="images/nice_logo.png" alt="logo">
             </a>
         </div>
         
         
 
-        <form action="form" method="post">
+        <form action="form" name="joinform" id="joinform" method="post" onsubmit="return joinForm();">
 
             <ul class="listyle">
-                <li>
-                    <span>
-                        아이디
-                    </span>
-                    <input type="text" name="userId" placeholder="아이디를 입력하세요." required>
+                <li class="useridlist">
+                    <label>
+                        <span class="requ">
+                            아이디
+                        </span>
+                        <input type="text" id="userid" name="userid" placeholder="아이디 확인을 누르세요." readonly>
+                    </label>
+                    <input type="button" id="idsearch" name="idsearch" value="아이디 확인">  <!-- 나중에 jsp로 id 확인 추가 -->
                 </li>
                 <li>
-                    <span>비밀번호</span>
-                    <input type="password" name="userPassword" placeholder="비밀번호를 입력하세요." required>
+                    <label>
+                        <span class="requ">비밀번호</span>
+                        <input type="password" id="userpass" name="userpass" placeholder="비밀번호를 입력하세요.">
+                        <span class="uncorrect">비밀번호를 입력하세요.</span>
+                    </label>
                 </li>
                 <li>
-                    <span>비밀번호 확인</span>
-                    <input type="password" name="userPassword2" placeholder="비밀번호를 입력하세요." required>
+                    <label>
+                        <span class="requ">비밀번호 확인</span>
+                        <input type="password" id="userpass2" name="userpass2" placeholder="비밀번호를 확인하세요.">
+                        <span class="uncorrect">비밀번호를 확인하세요.</span>
+                    </label>
                 </li>
                 <li>
-                    <span>이름</span>
-                    <input type="text" name="name" placeholder="이름을 입력하세요." required>
+                    <label>
+                        <span class="requ">이름</span>
+                        <input type="text" id="username" name="username" placeholder="이름을 입력하세요.">
+                        <span class="uncorrect">이름을 입력하세요.</span>
+                    </label>
                 </li>
                 <li>
-                    <span>생년월일(6자리)</span>
-                    <input type="text" name="birth" maxlength="6" placeholder="생년월일을 입력하세요" required>
+                    <label>
+                        <span class="requ">생년월일(6자리)</span>
+                        <input type="text" id="userbirth" name="userbirth" maxlength="6" oninput="this.value = this.value.replace(/[^0-9.]/g,'');" placeholder="생년월일을 입력하세요">
+                        <span class="uncorrect">생년월일을 입력하세요.</span>
+                    </label>
                 </li>
                 <li>
-                    <span>휴대폰번호</span>
+                    <span class="requ">휴대폰번호</span>
                     <div class="jcenter">
 
-                        <select name="number">
+                        <select id="number" name="number">
                             <option value="010" selected>010</option>
                             <option value="031">031</option>
                             <option value="02">02</option>
                             <option value="032">032</option>
                         </select>
                         -
-                        <input type="text" maxlength="4" placeholder="1234" name="tel2" class="tel" required>
+                        <input type="text" id="firstnum" name="firstnum" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g,'');" placeholder="1234" class="tel">
                         -
-                        <input type="text" maxlength="4" placeholder="5678" name="tel3" class="tel" required>
+                        <input type="text" id="secondnum" name="secondnum" maxlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g,'');" placeholder="5678" class="tel">
                     </div>
+                    <span class="uncorrect">휴대폰 번호를 입력하세요.</span>
                 </li>
                 <li>
-                    <span>이메일</span>
+                    <span class="requ">이메일</span>
                     <div class="jcenter">
-                        <input type="text" name="email" class="email" placeholder="이메일을 입력하세요.">
+                        <input type="text" id="email" name="email" class="email" placeholder="이메일을 입력하세요.">
                         @
-                        <input type="text" name="email2" id="email2" class="email" value="">
+                        <input type="text" id="email2" name="email2" class="email" value="">
                     </div>
-                        <select name="email3">
+                        <select id="email3" name="email3">
                             <option value="">직접입력</option>
                             <option value="naver.com">naver.com</option>
                             <option value="daum.net">daum.net</option>
@@ -81,15 +95,16 @@
                             <option value="nate.com">nate.com</option>
                             <option value="hanmail.net">hanmail.net</option>
                         </select>
+                    <span class="uncorrect">이메일을 입력하세요.</span>
                 </li>
             </ul>
 
-            <label>
-                <input type="checkbox">이메일 수신에 동의합니다. (선택)
+            <label class="emailok">
+                <input type="checkbox" id="emailok" name="emailok">이메일 수신에 동의합니다. (선택)
             </label>
             <div class="btn-box">
                 <button type="submit" class="myButton">
-                    확 인
+                    회원가입
                 </button>
                 <button type="reset" class="myButton2">
                     취 소
@@ -105,6 +120,9 @@
     <footer>
 
     </footer>
+    
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/join.js"></script>
     
 </body>
 </html>
